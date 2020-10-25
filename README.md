@@ -8,8 +8,6 @@ This project is the result of the Arcane technical test
 - flask-marshmallow : Used to serialize object.
 - flask-sqlalchemy : The database.
 - marshmallow-sqlalchemy : Used to make the link between marshmallow and sqlalchemy.
-- flasgger : Used to generate the documentation
-- apispec : Required for the integration between marshmallow and flasgger
 
 
 ## Set up
@@ -21,7 +19,7 @@ pip3 install pipenv
 
 Install the Dependencies
 ```
-pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy flasgger apispec
+pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy
 ```
 
 ## Running the app
