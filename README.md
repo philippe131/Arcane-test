@@ -40,7 +40,17 @@ To check the fields of the created, go at the end of the Readme
 
 Create a new user, for the date_birth use the format : Day/Month/year
 ```
-Post request to http://127.0.0.1:5000/users with a json containing the fields of an user.
+POST request to http://127.0.0.1:5000/users with a json containing the fields of an user.
+```
+
+Recover all the users from the Database
+```
+GET request to http://127.0.0.1:5000/users
+```
+
+Update a user using his id
+```
+PUT request to http://127.0.0.1:5000/users/<id>
 ```
 
 ## Database description

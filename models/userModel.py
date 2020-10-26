@@ -1,9 +1,12 @@
 from models import app, db
 
-# User Class/Model
+# User Class/Model for the database
 class User(db.Model):
+
+    # All the column of the table
+    id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(80))
-    last_name = db.Column(db.String(80), primary_key=True)
+    last_name = db.Column(db.String(80))
     date_birth = db.Column(db.Date)
 
     def __init__(self, first_name, last_name, date_birth):
