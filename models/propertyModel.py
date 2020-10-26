@@ -8,15 +8,15 @@ class Property(db.Model):
     description = db.Column(db.String(250))
     type = db.Column(db.String(50))
     city = db.Column(db.String(80))
-    pieces = db.Column(db.Integer)
+    nb_pieces = db.Column(db.Integer)
     feature_pieces = db.Column(db.String(300))
-    owner = db.Column(db.Date, db.ForeignKey('user.last_name'), nullable=False)
+    owner = db.Column(db.String(80), db.ForeignKey('user.last_name'), nullable=False)
 
-    def __init__(self, name, description, type, city, pieces, feature_pieces, owner):
+    def __init__(self, name, description, type, city, nb_pieces, feature_pieces, owner):
         self.name = name
         self.description = description
         self.type = type
         self.city = city
-        self.pieces = pieces
+        self.nb_pieces = nb_pieces
         self.feature_pieces = feature_pieces
         self.owner = owner
