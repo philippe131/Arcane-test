@@ -80,8 +80,8 @@ PUT request to http://127.0.0.1:5000/properties/<id>
 
 ## Database description
 
-user (id = Integer, last_name = String, first_name = String, date_birth = Date)
+- user (id = Integer, last_name = String, first_name = String, date_birth = Date)
 
-property (id = Integer, name = String, description = String, type = String, city = string, nb_piece = Integer, feature_pieces = String, owner = String)
+- property (id = Integer, name = String, description = String, type = String, city = string, nb_piece = Integer, feature_pieces = String, owner = String)
 
 You can't insert a property without owner.
