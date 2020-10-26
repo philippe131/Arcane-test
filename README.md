@@ -24,12 +24,25 @@ pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy
 
 ## Running the app
 
-To run the app, first run the models.py file directly to create the database tables, you only need to do it once unless you change your model definitions
+To run the app, first run the createBd.py file to create the database tables, you only need to do it once unless you change your model definitions
 ```
-python models.py
+python createBd.py
 ```
 
 Run the app itself
 ```
 python app.py
 ```
+
+## How to use it (Once the database is created)
+
+To check the fields of the created, go at the end of the Readme
+
+Create a new user, for the date_birth use the format : Day/Month/year
+```
+Post request to http://127.0.0.1:5000/users with a json containing the fields of an user.
+```
+
+## Database description
+
+user (last_name = String, first_name = String, date_birth = Date). For the
