@@ -8,10 +8,15 @@ import datetime
 # create the user Blueprint
 users = Blueprint('users', __name__)
 
+# Get single User
+@app.route('/users/<id>', methods=['GET'])
+def get_user(id):
+    user = userModel.User.query.get(id)
+    return userSchema.user_schema.jsonify(user)
+
 # Get all user
 @users.route('/users', methods=['GET'])
 def get_users():
-    # User have meth query because it is a db model
     all_users = userModel.User.query.all()
     result = userSchema.users_schema.dump(all_users)
     return jsonify(result)

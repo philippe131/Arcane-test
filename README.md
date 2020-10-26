@@ -36,16 +36,16 @@ python app.py
 
 ## How to use it (Once the database is created)
 
-To check the fields of the created, go at the end of the Readme
+To check the fields and the specificities of the Db, go at the end of the Readme
 
 Create a new user, for the date_birth use the format : Day/Month/year
 ```
 POST request to http://127.0.0.1:5000/users with a json containing the fields of an user.
 ```
 
-Recover all the users from the Database
+Recover all the users from the Database or just one
 ```
-GET request to http://127.0.0.1:5000/users
+GET request to http://127.0.0.1:5000/users or GET request to http://127.0.0.1:5000/users/<id>
 ```
 
 Update a user using his id
@@ -53,6 +53,27 @@ Update a user using his id
 PUT request to http://127.0.0.1:5000/users/<id>
 ```
 
+Create a new property
+```
+POST request to http://127.0.0.1:5000/users with a json
+```
+
+Get all the properties or just one
+```
+GET request to http://127.0.0.1:5000/propreties or GET request to http://127.0.0.1:5000/propreties/<id>
+```
+
+Update a property using his id
+```
+PUT request to http://127.0.0.1:5000/properties/<id>
+```
+
+
+
 ## Database description
 
-user (last_name = String, first_name = String, date_birth = Date). For the
+user (id = Integer, last_name = String, first_name = String, date_birth = Date)
+
+property (id = Integer, name = String, description = String, type = String, city = string, nb_piece = Integer, feature_pieces = String, owner = String)
+
+You can't insert a property without owner.
