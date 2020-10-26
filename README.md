@@ -1,6 +1,16 @@
 # Arcane-test
 
-This project is the result of the Arcane technical test
+This project is the result of the Arcane technical test.
+
+## Potential futur improvements
+
+- Implements a test for every http request.
+- Handle error raised when you try to create a property with an unknow owner.
+- Allow users to only view properties from one city
+- Restrict access of the users only to their propreties
+- Allow users to delete their properties
+- Allow users to find a properties using other filter like the number of pieces or the name of the owner
+
 
 ## Dependencies
 
@@ -19,7 +29,7 @@ pip3 install pipenv
 
 Install the Dependencies
 ```
-pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy
+pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy Flask-Testing
 ```
 
 ## Running the app
@@ -67,8 +77,6 @@ Update a property using his id
 ```
 PUT request to http://127.0.0.1:5000/properties/<id>
 ```
-
-
 
 ## Database description
 
