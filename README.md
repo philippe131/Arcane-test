@@ -2,15 +2,7 @@
 
 This project is the result of the Arcane technical test.
 
-## Potential futur improvements
-
-- For the test, automatize the filling of the test data
-- Handle error raised when you try to create a property with an unknow owner.
-- Allow users to only view properties from one city
-- Restrict access of the users only to their propreties
-- Allow users to delete their properties
-- Allow users to find a properties using other filter like the number of pieces or the name of the owner
-
+For the potential futur improvements go to the end of the Readme.
 
 ## Dependencies
 
@@ -93,3 +85,13 @@ PUT request to http://127.0.0.1:5000/properties/<id>
 - property (id = Integer, name = String, description = String, type = String, city = string, nb_pieces = Integer, feature_pieces = String, owner = String)
 
 You can't insert a property without owner.
+
+## Potential futur improvements
+
+- For the test, automatize the filling of the test data
+- Handle error raised when trying to create a property with an unknow owner.
+- Handle error raised when trying to recover a property / a user which don't exist
+- Allow users to only view properties from one city
+- Restrict access of the users only to their propreties
+- Allow users to delete their properties
+- Allow users to find a properties using other filter like the number of pieces or the name of the owner
