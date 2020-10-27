@@ -9,7 +9,7 @@ import datetime
 users = Blueprint('users', __name__)
 
 # Get single User
-@app.route('/users/<id>', methods=['GET'])
+@users.route('/users/<id>', methods=['GET'])
 def get_user(id):
     user = userModel.User.query.get(id)
     return userSchema.user_schema.jsonify(user)
