@@ -21,6 +21,25 @@ def get_users():
     result = userSchema.users_schema.dump(all_users)
     return jsonify(result)
 
+# Create a user
+@users.route('/users', methods=['POST'])
+def add_user():
+
+    last_name = request.json['last_name']
+    first_name = request.json['first_name']
+    date_birth = request.json['date_birth']
+
+    # Create a date object and an object User with the fetched data
+    date_birth_obj = datetime.datetime.strptime(date_birth, '%d/%m/%Y')
+    new_user = userModel.User(last_name, first_name, date_birth_obj)
+
+    # Add the new object to the bdd
+    db.session.add(new_user)
+    db.session.commit()
+
+    # What we return to the client
+    return userSchema.user_schema.jsonify(new_user)
+
 # Update a user
 @users.route('/users/<id>', methods=['PUT'])
 def update_users(id):
@@ -46,25 +65,6 @@ def update_users(id):
     # What we return to the client
     return userSchema.user_schema.jsonify(user)
 
-
-# Create a user
-@users.route('/users', methods=['POST'])
-def add_user():
-
-    last_name = request.json['last_name']
-    first_name = request.json['first_name']
-    date_birth = request.json['date_birth']
-
-    # Create a date object and an object User with the fetched data
-    date_birth_obj = datetime.datetime.strptime(date_birth, '%d/%m/%Y')
-    new_user = userModel.User(last_name, first_name, date_birth_obj)
-
-    # Add the new object to the bdd
-    db.session.add(new_user)
-    db.session.commit()
-
-    # What we return to the client
-    return userSchema.user_schema.jsonify(new_user)
 
 # Register blueprint
 app.register_blueprint(users)

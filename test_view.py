@@ -34,7 +34,7 @@ class TestViews(TestCase):
         self.assertEqual(statuscode, 200)
 
     # Check for response 200 for POST /users
-    def test_create_users(self):
+    def test_create_user(self):
 
         # Pass the test data to POST /users
         tester = app.test_client(self)
@@ -44,8 +44,8 @@ class TestViews(TestCase):
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
 
-    # Check for response 200 for PUT /users
-    def test_update_users(self):
+    # Check for response 200 for PUT /users/<id>
+    def test_update_user(self):
 
         # Post the test data
         tester = app.test_client(self)
@@ -59,6 +59,19 @@ class TestViews(TestCase):
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
 
+    # Check for response 200 for GET /property/<id>
+    def test_get_property(self):
+        tester = app.test_client(self)
+        response = tester.get("/properties/1")
+        statuscode = response.status_code
+        self.assertEqual(statuscode, 200)
+
+    # Check for response 200 for GET /properties
+    def test_get_properties(self):
+        tester = app.test_client(self)
+        response = tester.get("/properties")
+        statuscode = response.status_code
+        self.assertEqual(statuscode, 200)
 
     # Create the db before every test
     def setUp(self):
