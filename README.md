@@ -20,6 +20,11 @@ Install pipenv
 pip3 install pipenv
 ```
 
+Run pipenv
+```
+pipenv shell
+```
+
 Install the Dependencies
 ```
 pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy Flask-Testing
