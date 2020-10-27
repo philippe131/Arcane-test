@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_testing import TestCase
 from app import app
 from models import db
@@ -27,6 +27,18 @@ class TestViews(TestCase):
         response = tester.get("/users")
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
+
+    # Check for response 200 for POST /users
+    def test_create_users(self):
+
+        last_name = 'Gnansounou'
+        first_name = 'Philippe'
+        date_birth = '20/04/1998'
+
+        tester = app.test_client(self)
+        response = tester.post(
+        '/users', json = { 'last_name': last_name,
+        'first_name': first_name, 'date_birth': date_birth})
 
     # Create the db before every test
     def setUp(self):
