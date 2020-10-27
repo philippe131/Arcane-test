@@ -30,12 +30,12 @@ def add_property():
     description = request.json['description']
     type = request.json['type']
     city = request.json['city']
-    nb_piece = request.json['nb_piece']
-    carac_piece = request.json['carac_piece']
+    nb_pieces = request.json['nb_pieces']
+    feature_pieces = request.json['feature_pieces']
     owner = request.json['owner']
 
     # Create an object property with the fetched data
-    new_property = propertyModel.Property(name, description, type, city, nb_piece, carac_piece, owner)
+    new_property = propertyModel.Property(name, description, type, city, nb_pieces, feature_pieces, owner)
 
     # Add the new object to the bdd
     db.session.add(new_property)
