@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
-from views import app
-from createBd import db
+from views import app, db
+#from createDb import db
 from models import userModel
 from schemas import userSchema
 import datetime
