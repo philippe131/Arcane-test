@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 db.sqlite
 db.sqlite-journal
+dbTest.sqlite
 
 # C extensions
 *.so
