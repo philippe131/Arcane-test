@@ -34,9 +34,9 @@ python test_view.py
 
 ## Running the app
 
-To run the app, first run the createBd.py file to create the database tables, you only need to do it once unless you change your model definitions
+To run the app, first run the createDb.py file to create the database tables, you only need to do it once unless you change your model definitions
 ```
-python createBd.py
+python createDb.py
 ```
 
 Run the app itself
