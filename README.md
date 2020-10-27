@@ -4,7 +4,7 @@ This project is the result of the Arcane technical test.
 
 ## Potential futur improvements
 
-- Implements a test for every http request.
+- For the test, automatize the filling of the test data
 - Handle error raised when you try to create a property with an unknow owner.
 - Allow users to only view properties from one city
 - Restrict access of the users only to their propreties
@@ -18,6 +18,7 @@ This project is the result of the Arcane technical test.
 - flask-marshmallow : Used to serialize object.
 - flask-sqlalchemy : The database.
 - marshmallow-sqlalchemy : Used to make the link between marshmallow and sqlalchemy.
+- Flask-Testing : Pour les tests unitaires
 
 
 ## Set up
@@ -30,6 +31,13 @@ pip3 install pipenv
 Install the Dependencies
 ```
 pipenv install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy Flask-Testing
+```
+
+## Running the tests
+
+To run the test launch
+```
+python test_view.py
 ```
 
 ## Running the app
