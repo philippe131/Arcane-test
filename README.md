@@ -1,6 +1,6 @@
-# Arcane-test
+# Flask-api
 
-This project is the result of the Arcane technical test.
+This project is a basic flask api.
 
 For the potential futur improvements go to the end of the Readme.
 
