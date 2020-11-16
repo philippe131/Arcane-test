@@ -1,6 +1,6 @@
 # Flask-api
 
-This project is a basic flask api.
+This project is a basic flask rest api.
 
 For the potential futur improvements go to the end of the Readme.
 
